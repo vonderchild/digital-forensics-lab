@@ -1,4 +1,4 @@
-# Lab 2 — Common Windows Artifacts
+# Common Windows Artifacts
 
 The windows operating system is composed of a large number of artifacts, including files, directories, logs, registries, browser history, user accounts and other important data which are essential for it to function properly.
 
