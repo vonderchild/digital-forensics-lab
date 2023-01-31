@@ -26,13 +26,13 @@ The common goal includes collecting evidence that can be used to prosecute suspe
 
 - **REvil Ransomware Group gets arrested in Russia**
     
-    ![Investigator taking an initial look](files/revil.png)
+    ![Investigator taking an initial look](files/images/revil.png)
     
     [Link to video](https://www.youtube.com/watch?v=OqEWuFmzhzs)
     
 - **Author of Raccoon Stealer gets arrested in Netherlands**
     
-    ![Tweet from @vxunderground](files/raccoon.png)
+    ![Tweet from @vxunderground](files/images/raccoon.png)
     
     [Link to tweet](https://twitter.com/vxunderground/status/1587304651426332673)
     
@@ -204,7 +204,7 @@ The `hexedit` tool lets you edit raw bytes of a file in an interactive way. It i
 $ hexedit image.jpg
 ```
 
-![Output](files/hexedit_output.png)
+![Output](files/images/hexedit_output.png)
 
 ## `ps` — used to list the process running on the system
 
