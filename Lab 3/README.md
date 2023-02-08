@@ -344,12 +344,12 @@ Next, open the file in Sonic Visualizer, and click Layer → Add Spectogram.
 
 1. A phishing attack has been reported in your organization, where an employee received a malicious Word document in an email that appeared to come from a trusted source. The employee opened the document which had macros in it, resulting in the attacker gaining access to the employee’s computer. A secret which will reveal the attacker's identity, is embedded inside the macro code. You are tasked with analyzing the macro code and extracting the embedded secret. The secret has the format `flag{s0me_str1ng}`.
 
-  The Word document can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 3/files/YearlyBonus.docm](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%203/files/YearlyBonus.docm).
+    The Word document can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 3/files/YearlyBonus.docm](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%203/files/YearlyBonus.docm).
 
 2. A mole within the government has leaked top secret information to a spy. The mole, aware of spycraft techniques, used steganography to hide the information within an image, which he then slipped to his handler. The spy received the image and pasted it into a PowerPoint document, covering it with multiple random images to conceal it. One of our spies has gained access to the enemy spy's computer and recovered the PowerPoint document. Your mission is to extract the first image, extract the top secret information as well as the name and location of his source inside the government.
 
-  The PowerPoint document can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 3/files/Presentation.pptx](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%203/files/Presentation.pptx).
+    The PowerPoint document can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 3/files/Presentation.pptx](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%203/files/Presentation.pptx).
 
 3. Provided with the audio file from the Audio Steganography section, figure out how you can view the spectogram and recover the flag using Audacity. Submit a screenshot.
 
-  The audio file can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 3/files/super_secret_audio.wav](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%203/files/super_secret_audio.wav).
+    The audio file can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 3/files/super_secret_audio.wav](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%203/files/super_secret_audio.wav).
