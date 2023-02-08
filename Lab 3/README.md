@@ -1,4 +1,4 @@
-# Lab 3 — Document Analysis and Steganography
+# Document Analysis and Steganography
 
 Documents are a common way of sending or storing information like messages, reports, videos, or ideas. MS Office documents, Images, and audio files are some commonly used formats in our day-to-day lives. However, beyond what we see written in a word document or hear in an audio file, these documents can also contain hidden messages or malicious code that may execute when we open them. In this lab, we’ll explore some techniques to analyze and examine these documents.
 
@@ -325,7 +325,7 @@ For JPEG files, a commonly used steganography method involves finding pairs of p
 With `steghide` tool, we can hide and extract messages out of JPEG files.
 
 
-> 💡 Another tool to add to your digital forensics toolkit is `exiftool`, which can be useful in extracting metadata from files such as an image or an audio file, which includes information such as the creation and modification dates, author, and location of where an image was capture (longitude and latitude).
+> 💡 Another tool to add to your digital forensics toolkit is `exiftool`, which can be useful in extracting metadata from files such as an image or an audio file, which includes information such as the creation and modification dates, author, and location of where an image was captured (latitude and longitude).
 
 
 # Audio Steganography
