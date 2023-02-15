@@ -61,7 +61,7 @@ To fully engage in the hands-on experience, ensure you have followed the steps i
 
 Also known as "directory traversal", this vulnerability allows attackers to access files and directories on a server that are outside of the root directory. It is often achieved by manipulating file path input fields in a web application to access files that the application has permission to access, but the attacker should not. This type of attack can result in sensitive information being leaked, such as configuration files and source code.
 
-For example, let’s consider that you’re currently in the home directory `/home/kali/`. To change to a parent directory to `/home`, you would enter `cd ../`. To reach the root directory, you would enter `cd ../../`. This same concept is employed in a path traversal attack, where a website allows access to files outside the website’s root directory.
+For example, let's consider that you're currently in the home directory `/home/kali/`. To change to a parent directory to `/home`, you would enter `cd ../`. To reach the root directory, you would enter `cd ../../`. This same concept is employed in a path traversal attack, where a website allows access to files outside the website's root directory.
 
 > Note: The term path traversal is often used interchangeably with Local File Inclusion (LFI), however, both are different vulnerabilities; Path traversal is limited to reading files on the server, while Local File Inclusion refers to the additional ability to execute that file on the server.
 > 
@@ -70,7 +70,7 @@ To try it out, head over to [http://127.0.0.1/images.php](http://127.0.0.1/image
 
 ![images](files/images/images.png)
 
-If we enter the correct image name, the web application will display it back to us. But what if we try to enter a file name that’s not an image, like `/etc/passwd`? To our surprise, it will print out its contents. However, we just need to add some leading `../` before our file name `/etc/passwd`.
+If we enter the correct image name, the web application will display it back to us. But what if we try to enter a file name that's not an image, like `/etc/passwd`? To our surprise, it will print out its contents. However, we just need to add some leading `../` before our file name `/etc/passwd`.
 
 ![path_traversal](files/images/path_traversal.png)
 
@@ -181,7 +181,7 @@ The first message indicates a warning of a pattern match related to Path Travers
 
 Additionally, two errors of type `Apache-Error` are displayed, one is another warning of a Path Traversal attack, but this time a slightly different pattern is matched. The other `Apache-Error` is a warning of an inbound anomaly score exceeding the set threshold, indicating a potential attack. The total inbound score, type of attacks, and paranoia level scores are all logged, providing insight into the threat level.
 
-> Note: To make sense of log data in a forensics investigation, filtering through irrelevant details and retaining only the essential data is crucial. This is why I snipped some information from the above logs since it was just redundant information and only presented what’s important to us.
+> Note: To make sense of log data in a forensics investigation, filtering through irrelevant details and retaining only the essential data is crucial. This is why I snipped some information from the above logs since it was just redundant information and only presented what's important to us.
 
 ### Remote Command Execution
 
@@ -193,13 +193,13 @@ For example, if a website allows users to enter a command to search for files, a
 
 To try it out, head over to [http://127.0.0.1:9090/command.php](http://127.0.0.1:9090/command.php). The web app allows us to enter commands, executes them, and returns the output. In absence of proper security checks, this can be exploited to compromise and wipe the whole system.
 
-To generate logs on the server, let’s execute the following commands in order:
+To generate logs on the server, let's execute the following commands in order:
 
 1. `id`
 2. `cat /etc/passwd`
 3. `cat /etc/shadow`
 
-Let’s now inspect the access logs:
+Let's now inspect the access logs:
 
 ```
 root@18c7468edbe7:/var/log/apache2# cat access.log 
@@ -268,7 +268,7 @@ In an SQL Injection (SQLi) attack, attackers manipulate the website's input fiel
 
 For example, consider a website with a login page that takes in a username and password. Normally, the website would compare the entered credentials against those stored in a database to determine if the user should be granted access. If the website's code is vulnerable to SQL injection, an attacker could enter `' OR 1=1--` as their username, which would essentially trick the database into returning all records, bypassing any authentication checks.
 
-To try it out, head over to [http://127.0.0.1:9090/users.php](http://127.0.0.1:9090/users.php) and it should display a list of users along with an input field that let’s us search for users by their usernames.
+To try it out, head over to [http://127.0.0.1:9090/users.php](http://127.0.0.1:9090/users.php) and it should display a list of users along with an input field that let's us search for users by their usernames.
 
 To start with the attack and generate logs on the server enter the following payloads in sequence:
 
@@ -287,9 +287,7 @@ root@18c7468edbe7:/var/log/apache2# cat error.log | grep SQLi
 [Tue Feb 14 07:06:30.457523 2023] [:error] [pid 284] [client 172.17.0.1:43214] [client 172.17.0.1] ModSecurity: Warning. detected SQLi using libinjection with fingerprint 'sUEnk' [file "/usr/share/modsecurity-crs/rules/REQUEST-942-APPLICATION-ATTACK-SQLI.conf"] [line "65"] [id "942100"] [msg "SQL Injection Attack Detected via libinjection"] [data "Matched Data: sUEnk found within ARGS:search: user1' union select username, email, password from users #"] [severity "CRITICAL"] [ver "OWASP_CRS/3.3.2"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-sqli"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "capec/1000/152/248/66"] [tag "PCI/6.5.2"] [hostname "127.0.0.1"] [uri "/users.php"] [unique_id "Y-rspuEICGjDc-9y71EemAAAAAU"], referer: http://127.0.0.1:9090/users.php
 ```
 
-As can be seen, running `cat` command with `grep` lets us see immediately the two occurrences of SQLi detection made by WAF.
-
-Similarly, detection logs can be found inside the `modsec_audit.log` file, but I leave that for you to explore.
+As can be seen, running `cat` command with `grep` lets us see immediately the two occurrences of SQLi detection made by WAF. The detailed audit logs for these detections can be found inside the `modsec_audit.log` file, and I'll suggest you to explore and experiment with that on your own.
 
 # Exercises
 
