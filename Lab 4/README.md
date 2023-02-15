@@ -74,7 +74,7 @@ If we enter the correct image name, the web application will display it back to 
 
 ![path_traversal](files/images/path_traversal.png)
 
-Now that we are familiar with the method of exploiting this vulnerability, let's proceed to learn how to detect it in our logs. In order to access the logs, we must first take shell inside the docker container where our application is running. We do that by first listing the container ID using `docker ps -q` and then executing `docker exec` to spawn the shell.
+Now that we are familiar with the method of exploiting this vulnerability, let's proceed to learn how to detect it in our logs. In order to access the logs, we must first take shell inside the docker container where our application is running. We do that by first listing the container ID using `docker ps -q` and then executing `docker exec` to spawn a shell:
 
 ```
 $ docker ps -q
@@ -84,7 +84,7 @@ $ docker exec -it 18c7468edbe7 bash
 root@18c7468edbe7:/#
 ```
 
-Now, let's go to the directory containing the access logs and print them.
+Now, let's go to the directory containing the access logs and print them:
 
 ```
 root@18c7468edbe7:/# cd /var/log/apache2/
@@ -179,7 +179,7 @@ As seen, this displays a rather detailed audit of access logs containing the req
 
 The first message indicates a warning of a pattern match related to Path Traversal. It highlights that a malicious string matching the pattern was found in the `REQUEST_URI_RAW` and it is a critical issue.
 
-Additionally, two errors of type `Apache-Error` are displayed, one is another warning of a Path Traversal attack, but this time a slightly different pattern is matched. The other `Apache Error` is a warning of an inbound anomaly score exceeding the set threshold, indicating a potential attack. The total inbound score, type of attacks, and paranoia level scores are all logged, providing insight into the threat level.
+Additionally, two errors of type `Apache-Error` are displayed, one is another warning of a Path Traversal attack, but this time a slightly different pattern is matched. The other `Apache-Error` is a warning of an inbound anomaly score exceeding the set threshold, indicating a potential attack. The total inbound score, type of attacks, and paranoia level scores are all logged, providing insight into the threat level.
 
 > Note: To make sense of log data in a forensics investigation, filtering through irrelevant details and retaining only the essential data is crucial. This is why I snipped some information from the above logs since it was just redundant information and only presented what’s important to us.
 
@@ -282,7 +282,7 @@ We use the first query to check if the web application is vulnerable to SQL inje
 As both of these are POST requests, we can check for logs inside the `error.log` file:
 
 ```
-root@18c7468edbe7:/var/log/apache2# head error.log | grep SQLi
+root@18c7468edbe7:/var/log/apache2# cat error.log | grep SQLi
 [Tue Feb 14 07:06:08.179011 2023] [:error] [pid 283] [client 172.17.0.1:46534] [client 172.17.0.1] ModSecurity: Warning. detected SQLi using libinjection with fingerprint 's&1c' [file "/usr/share/modsecurity-crs/rules/REQUEST-942-APPLICATION-ATTACK-SQLI.conf"] [line "65"] [id "942100"] [msg "SQL Injection Attack Detected via libinjection"] [data "Matched Data: s&1c found within ARGS:search: user1' and 1=1 #"] [severity "CRITICAL"] [ver "OWASP_CRS/3.3.2"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-sqli"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "capec/1000/152/248/66"] [tag "PCI/6.5.2"] [hostname "127.0.0.1"] [uri "/users.php"] [unique_id "Y-rskPjbDGrOk3ohd6V4HQAAAAQ"], referer: http://127.0.0.1:9090/users.php
 [Tue Feb 14 07:06:30.457523 2023] [:error] [pid 284] [client 172.17.0.1:43214] [client 172.17.0.1] ModSecurity: Warning. detected SQLi using libinjection with fingerprint 'sUEnk' [file "/usr/share/modsecurity-crs/rules/REQUEST-942-APPLICATION-ATTACK-SQLI.conf"] [line "65"] [id "942100"] [msg "SQL Injection Attack Detected via libinjection"] [data "Matched Data: sUEnk found within ARGS:search: user1' union select username, email, password from users #"] [severity "CRITICAL"] [ver "OWASP_CRS/3.3.2"] [tag "application-multi"] [tag "language-multi"] [tag "platform-multi"] [tag "attack-sqli"] [tag "paranoia-level/1"] [tag "OWASP_CRS"] [tag "capec/1000/152/248/66"] [tag "PCI/6.5.2"] [hostname "127.0.0.1"] [uri "/users.php"] [unique_id "Y-rspuEICGjDc-9y71EemAAAAAU"], referer: http://127.0.0.1:9090/users.php
 ```
@@ -307,4 +307,4 @@ Hint: The secret you're looking for is not in a `.sql` or a `.php` file.
 9. What were some indicators that confirmed that an attack had taken place? What were your key takeaways from this attack?
 10. Based on this attack, what indicators of compromise can be used to detect future attacks?
 
-The logs can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/tree/main/Lab%204/files/logs.zip](https://github.com/vonderchild/digital-forensics-lab/tree/main/Lab%204/files/logs.zip)
+The logs can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/tree/main/Lab%204/files/logs.zip](https://github.com/vonderchild/digital-forensics-lab/tree/main/Lab%204/files/logs.zip).
