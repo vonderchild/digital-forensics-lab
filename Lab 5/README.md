@@ -44,17 +44,17 @@ The following table presents a mapping between some commonly used protocols and 
 
 # Network Traffic Forensics
 
-In this section, let’s explore the tools and techniques used to capture and analyze network traffic, extract valuable information, detect suspicious behavior, and investigate attacks on the network.
+In this section, let's explore the tools and techniques used to capture and analyze network traffic, extract valuable information, detect suspicious behavior, and investigate attacks on the network.
 
 ## Capturing Network Traffic
 
-The pre requisite to perform network traffic forensics is to capture the network traffic. This can be achieved using a network packet capture or sniffing tool, such as Wireshark or tcpdump. For this lab, we’ll mainly be using Wireshark, so make sure you have it installed on your machine. 
+The pre requisite to perform network traffic forensics is to capture the network traffic. This can be achieved using a network packet capture or sniffing tool, such as Wireshark or tcpdump. For this lab, we'll mainly be using Wireshark, so make sure you have it installed on your machine. 
 
 To capture live network traffic, follow the steps below:
 
 1. Open Wireshark by entering `wireshark` in the terminal on Linux or through the Start menu on Windows.
 2. Once it is open, select a network interface that you want to capture traffic on. In most cases, it is `eth0`.
-3. Click the blue colored shark’s fin icon on top left of the window to start capturing traffic.
+3. Click the blue colored shark's fin icon on top left of the window to start capturing traffic.
 4. In most cases you should already see packets begin to appear on Wireshark. If not, you can try generating some traffic by visiting a website in your browser, like [https://www.google.com/](https://www.google.com/).
 5. To stop capturing traffic, click the stop button in red on top left.
 6. To save the capture traffic, go to File → Save as, and select a name and location to save the capture file.
@@ -126,11 +126,11 @@ The organization that previously hired you to investigate the web attack has rea
 2. It appears that the attacker is attempting to brute force the user's FTP password. Can you find any evidence of a correct password, and if so, what is it?
 3. What additional information was the attacker able to extract from the user's FTP account?
 4. What actions did the attacker take with the information obtained from the user's FTP account?
-5. What’s the root account password?
+5. What's the root account password?
 6. Can you identify the packet numbers in which the attacker exploited the Remote Code Execution vulnerability to gain access to the system? What was the exact payload used by the attacker?
 7. After gaining access to the system, what does the attacker seem to be doing?
-8. The attacker read a file from root’s home directory. What was in that file?
-9. The attacker downloaded a file inside `/tmp` directory. What’s the purpose of that file?
-10. What information was transmitted through the attacker’s covertly established channel of communication?
+8. The attacker read a file from root's home directory. What was in that file?
+9. The attacker downloaded a file inside root's home directory. What's the purpose of that file?
+10. What information was transmitted through the attacker's covertly established channel of communication?
 
 The traffic capture file can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 5/files/challenge.pcapng](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%205/files/challenge.pcapng).
