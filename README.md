@@ -9,5 +9,6 @@ This repository contains the course material for the digital forensics lab offer
 - [Lab 3 — Document Analysis and Steganography](/Lab%203/)
 - [Lab 4 — Web Attack Forensics](/Lab%204/)
 - [Lab 5 — Network Traffic Forensics](/Lab%205/)
+- [Lab 6 — Disk Image Forensics](/Lab%206/)
 
 The repository will be regularly updated with new materials and exercises, so please make sure to regularly check for updates. If you have any questions or feedback, feel free to reach out.
