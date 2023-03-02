@@ -8,7 +8,7 @@ In this lab, we will explore the basics of disk image forensics, including the b
 
 ### Disk Image
 
-A disk image is a bit-by-bit copy of an entire disk (such as a hard drive, USB, etc.) or partition that preserves the exact content and structure of the original data. It includes not only the files and folders but also the empty space, metadata, and other hidden data that is not normally visible to the user.
+A disk image is a bit-by-bit copy of an entire disk (such as a hard drive, USB, etc.) or partition that preserves the exact content and structure of the original data. It includes not only the files and folders but also the empty space, metadata, and other hidden data that is not normally visible.
 
 ### Disk Imaging
 
@@ -82,7 +82,7 @@ We can also extract any of the files that may be of interest by simply right-cli
 - **$MFTMirr** — This file stands for MFT Mirror and serves as a backup of the $MFT, and is crucial in case the original $MFT becomes corrupted.
 - **$LogFile** — This file records transaction journal information of metadata (MFT area), and can be used to recover from system crashes.
 
-For analyzing these files, there are several tools available such as [analyzeMFT](https://github.com/dkovar/analyzeMFT), or [MFTECmd](https://github.com/EricZimmerman/MFTECmd) available at [https://ericzimmerman.github.io/#!index.md](https://ericzimmerman.github.io/#!index.md).
+For analyzing these files, there are several tools available such as [analyzeMFT](https://github.com/dkovar/analyzeMFT), or [MFTECmd](https://github.com/EricZimmerman/MFTECmd) available for download at [https://ericzimmerman.github.io/#!index.md](https://ericzimmerman.github.io/#!index.md).
 
 >💡 There may be a lot more files that may be present in a disk image like $Boot, $Secure, $Volume, etc. However, I encourage you to explore these on your own as part of your learning process.
 
@@ -92,7 +92,7 @@ In this lab, we covered some basic terminology, then moved on to learning how to
 
 # Exercises
 
-Utilize the disk image from the section "Analyzing a Disk Image" to answer the following questions:
+Utilize the disk image from the section [Analyzing a Disk Image](#analyzing-a-disk-image) to answer the following questions:
 
 1. What are the MD5 and SHA1 hashes of the `note.txt` file?
 2. What's the MFT record number of the `note.txt` file? The answer may vary depending on the method used.
