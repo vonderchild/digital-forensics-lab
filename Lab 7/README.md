@@ -199,7 +199,7 @@ While we have only scratched the surface of malware analysis in this lab, it's i
 
 # Exercises
 
-You work for a financial institution that has just been hit by a malware. Rumors suggest that the attacker left 4 different malwares on the system, but only one of them is real, while the others are designed as rabbit holes to waste your time.
+You work for a financial institution that has just been hit by a malware. Rumors suggest that the attacker left 4 different malware on the system, but only one of them is real, while the others are designed as rabbit holes to waste your time.
 
 Luckily, the first responding team was able to collect all 4 samples. Your task is to analyze each of the 4 malware samples and extract any useful information out of them (preferably a flag).
 
