@@ -8,9 +8,9 @@ This lab serves as an introduction to different techniques and tools employed to
 
 # What Is Malware Analysis?
 
-To quote the book “Practical Malware Analysis”:
+To quote the book "Practical Malware Analysis":
 
-> Malware analysis is the art of dissecting malware to understand how it works, how to identify it, and how to defeat or eliminate it. And you don’t need to be an uber-hacker to perform malware analysis.
+> Malware analysis is the art of dissecting malware to understand how it works, how to identify it, and how to defeat or eliminate it. And you don't need to be an uber-hacker to perform malware analysis.
 
 Simply put, malware analysis is the process of analyzing and understanding malicious software in order to identify its behavior, characteristics, and potential impact on a system.
 
@@ -33,14 +33,14 @@ Now that we have a basic understanding of static and dynamic analysis, let's try
 To begin, we can download the compiled binary using the following command:
 
 ```
-$ wget https://github.com/vonderchild/digital-forensics-lab/raw/main/Lab%207/files/main
+wget https://github.com/vonderchild/digital-forensics-lab/raw/main/Lab%207/files/main
 ```
 
 ## Initial Analysis
 
-Before we begin our detailed analysis of the binary, it is important to identify the file type we’re dealing with and extract low hanging fruits like embedded URLs, hardcoded IP addresses, or strings containing suspicious keywords.
+Before we begin our detailed analysis of the binary, it is important to identify the file type we're dealing with and extract low hanging fruits like embedded URLs, hardcoded IP addresses, or strings containing suspicious keywords.
 
-To identify the type of file we’re dealing with, let’s run the `file` command:
+To identify the type of file we're dealing with, let's run the `file` command:
 
 ```
 $ file main
@@ -68,7 +68,7 @@ As can be seen, some of the extracted strings contain portion of an IP address `
 
 Other techniques often utilized during an initial analysis include checking if the file is packed or compressed, and searching for file signatures on platforms like [VirusTotal](https://www.virustotal.com/) to see if the file has been analyzed before.
 
-> 💡 VirusTotal is a platform that allows us to analyze suspicious files, domains, IPs and URLs to detect malware and other breaches, automatically share them with the security community.
+> 💡 VirusTotal is a platform that allows us to analyze suspicious files, domains, IPs and URLs to detect and analyze malware and automatically share it with the security community.
 
 ## Static Analysis
 
@@ -76,7 +76,7 @@ For static analysis, we'll be using [Cutter](https://cutter.re/), a reverse engi
 
 To download and run cutter, execute the following commands:
 
-```bash
+```
 wget https://github.com/rizinorg/cutter/releases/download/v2.2.0/Cutter-v2.2.0-Linux-x86_64.AppImage
 chmod +x Cutter-v2.2.0-Linux-x86_64.AppImage
 ./Cutter-v2.2.0-Linux-x86_64.AppImage --appimage-extract
@@ -91,11 +91,11 @@ After that, click Open, and on the Load Options window, click Ok.
 
 ![cutter2](files/images/cutter2.png)
 
-This should bring you to the dashboard tab that displays an overview of the binary we’re analyzing including its format, file type, programming language, architecture, and hashes.
+This should bring you to the dashboard tab that displays an overview of the binary we're analyzing including its format, file type, programming language, architecture, and hashes.
 
 ![cutter3](files/images/cutter3.png)
 
-To inspect the code of a function, we can double click the function name in the left pane, and it should display the code’s disassembled version:
+To inspect the code of a function, we can double click the function name in the left pane, and it should display the code's disassembled version:
 
 ![cutter4](files/images/cutter4.png)
 
@@ -195,7 +195,7 @@ In conclusion, we have explored the basics of malware analysis and studied how t
 
 These tools have various features that can aid in malware analysis and provide deeper insights into the behavior of malicious software. For instance, Ghidra is a powerful reverse engineering tool that can be used to disassemble and decompile binaries. Radare2 is an open-source reverse engineering framework that supports multiple architectures and file formats. IDA is a popular disassembler and debugger that offers advanced features such as cross-references and function signatures. GDB is a widely used debugger for Linux systems that allows for low-level debugging of running programs. Procmon and Process Hacker can be used to monitor system activity in real-time, making it useful for detecting malware that attempts to hide its activity.
 
-While we have only scratched the surface of malware analysis in this lab, it’s important to note that there are many more advanced tools and methodologies out there that you can explore.
+While we have only scratched the surface of malware analysis in this lab, it's important to note that there are many more advanced tools and methodologies out there that you can explore.
 
 # Exercises
 
@@ -203,4 +203,4 @@ You work for a financial institution that has just been hit by a malware. Rumors
 
 Luckily, the first responding team was able to collect all 4 samples. Your task is to analyze each of the 4 malware samples and extract any useful information out of them (preferably a flag).
 
-The 4 files you have to analyze can be found at [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 7/files/tasks](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%207/files/tasks).
+The 4 files that you have to analyze are available at [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 7/files/tasks](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%207/files/tasks).
