@@ -11,5 +11,6 @@ This repository contains the course material for the digital forensics lab offer
 - [Lab 5 — Network Traffic Forensics](/Lab%205/)
 - [Lab 6 — Disk Image Forensics](/Lab%206/)
 - [Lab 7 — Malware Analysis](/Lab%207/)
+- [Lab 8 — Memory Forensics](/Lab%208/)
 
 The repository will be regularly updated with new materials and exercises, so please make sure to regularly check for updates. If you have any questions or feedback, feel free to reach out.
