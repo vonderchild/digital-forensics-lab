@@ -305,4 +305,4 @@ Hint: The secret you're looking for is not in a `.sql` or a `.php` file.
 9. What were some indicators that confirmed that an attack had taken place? What were your key takeaways from this attack?
 10. Based on this attack, what indicators of compromise can be used to detect future attacks?
 
-The logs can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/tree/main/Lab%204/files/logs.zip](https://github.com/vonderchild/digital-forensics-lab/tree/main/Lab%204/files/logs.zip).
+The logs can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/tree/main/Lab%2004/files/logs.zip](https://github.com/vonderchild/digital-forensics-lab/tree/main/Lab%2004/files/logs.zip).

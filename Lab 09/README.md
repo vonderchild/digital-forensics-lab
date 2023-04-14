@@ -266,4 +266,4 @@ COPY ????????????????????????????????????
 RUN rm flag1.txt flag2-part1.txt flag2-part2.txt
 ```
 
-You can download the container image inside the tar archive from [here](/Lab%209/files/secrets.tar). It contains a total of 5 hidden flags that you need to find. Good luck!
+You can download the container image inside the tar archive from [here](/Lab%2009/files/secrets.tar). It contains a total of 5 hidden flags that you need to find. Good luck!

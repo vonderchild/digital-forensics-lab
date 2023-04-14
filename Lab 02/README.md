@@ -242,17 +242,17 @@ Here’s an example of event ID `1117` in the file `Microsoft-Windows-Windows De
     2. What’s the most recent typed path accessed as recorded in the registry?
     3. What’s the new value added to the registry by the malware in order to establish persistence over the system?
     
-    The registry file can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 2/files/NTUSER.DAT](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%202/files/NTUSER.DAT)
+    The registry file can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 02/files/NTUSER.DAT](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%2002/files/NTUSER.DAT)
     
 2. Given the Firefox profile of a suspect, answer the following:
     1. What’s the username and password stored in the saved logins?
     2. What’s the most frequently visited website?
     3. What’s the name of the file downloaded by the suspect?
     
-    The Firefox profile can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 2/files/Firefox.zip](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%202/files/Firefox.zip)
+    The Firefox profile can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 02/files/Firefox.zip](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%2002/files/Firefox.zip)
     
 3. Given the PowerShell Event logs of a compromised system, answer the following:
     1. What’s the command executed by the attacker to download a file on the system?
     2. Can you analyze the downloaded file and understand what’s the purpose of that file?
     
-    The event logs file can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 2/files/Microsoft-Windows-PowerShell%254Operational.evtx](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%202/files/Microsoft-Windows-PowerShell%254Operational.evtx)
+    The event logs file can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 02/files/Microsoft-Windows-PowerShell%254Operational.evtx](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%2002/files/Microsoft-Windows-PowerShell%254Operational.evtx)

@@ -28,12 +28,12 @@ Dynamic analysis is a method of analyzing malware by executing it in an isolated
 
 # Getting Hands On
 
-Now that we have a basic understanding of static and dynamic analysis, let's try them out in practice. The binary we will be analyzing is essentially a compiled version of C code available at [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 7/files/main.c](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%207/files/main.c).
+Now that we have a basic understanding of static and dynamic analysis, let's try them out in practice. The binary we will be analyzing is essentially a compiled version of C code available at [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 07/files/main.c](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%2007/files/main.c).
 
 To begin, we can download the compiled binary using the following command:
 
 ```
-wget https://github.com/vonderchild/digital-forensics-lab/raw/main/Lab%207/files/main
+wget https://github.com/vonderchild/digital-forensics-lab/raw/main/Lab%2007/files/main
 ```
 
 ## Initial Analysis
@@ -203,4 +203,4 @@ You work for a financial institution that has just been hit by a malware. Rumors
 
 Luckily, the first responding team was able to collect all 4 samples. Your task is to analyze each of the 4 malware samples and extract any useful information out of them (preferably a flag).
 
-The 4 files that you have to analyze are available at [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 7/files/tasks](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%207/files/tasks).
+The 4 files that you have to analyze are available at [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 07/files/tasks](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%2007/files/tasks).

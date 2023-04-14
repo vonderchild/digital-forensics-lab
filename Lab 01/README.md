@@ -248,5 +248,5 @@ Hint 2: Explore how `hexedit` can help you here.
     
     You may download the image using following command:  
     ```
-    curl https://raw.githubusercontent.com/vonderchild/digital-forensics-lab/main/Lab%201/files/challenge.png -o challenge.png
+    curl https://raw.githubusercontent.com/vonderchild/digital-forensics-lab/main/Lab%2001/files/challenge.png -o challenge.png
     ```

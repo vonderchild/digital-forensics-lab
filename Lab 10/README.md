@@ -1,4 +1,4 @@
-# Lab 10 — Cracking Passwords
+# Cracking Passwords
 
 In the world of digital security, passwords play a crucial role in safeguarding sensitive information, much like how doors protect your home from intruders. Passwords provide a way to authenticate users and protect sensitive information from unauthorized access. However, just like a door can be forced open with the right tools and techniques, passwords can be cracked.
 

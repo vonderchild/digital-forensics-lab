@@ -53,7 +53,7 @@ Once the disk image has been acquired, the next step is to analyze it for any ev
 
 >💡 Although FTK Imager is lightweight, it requires us to have prior knowledge about the files that are present inside a disk image and their locations. On the other hand, Autopsy automatically parses useful information such as images, internet history, geolocation, timeline, etc. It can also recover deleted files, search for patterns within the disk image, and generate detailed reports. So I'll suggest you to explore it as well.
 
-To download the disk image, use the link [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 6/files/Image.ad1](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%206/files/Image.ad1).
+To download the disk image, use the link [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 06/files/Image.ad1](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%2006/files/Image.ad1).
 
 To open a disk image in FTK Imager, click on "File" and then select "Add Evidence Item". From there, choose "Image File" and select the disk image you want to analyze:
 
