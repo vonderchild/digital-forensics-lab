@@ -72,7 +72,7 @@ The next step in network traffic forensics is to analyze the captured network tr
 
 While there are many features available in Wireshark for network forensics, some of the most commonly used ones include viewing protocol hierarchy, applying filters, viewing packet details and packet bytes, following TCP streams, and exporting objects.
 
-To begin analyzing sample captured network traffic, download the file from the URL [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 5/files/capture.pcapng](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%205/files/capture.pcapng) and open it in Wireshark. 
+To begin analyzing sample captured network traffic, download the file from the URL [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 05/files/capture.pcapng](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%2005/files/capture.pcapng) and open it in Wireshark. 
 
 ### Protocol Hierarchy
 
@@ -133,4 +133,4 @@ The organization that previously hired you to investigate the web attack has rea
 9. The attacker downloaded a file inside root's home directory. What's the purpose of that file?
 10. What information was transmitted through the attacker's covertly established channel of communication?
 
-The traffic capture file can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 5/files/challenge.pcapng](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%205/files/challenge.pcapng).
+The traffic capture file can be downloaded from [https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab 05/files/challenge.pcapng](https://github.com/vonderchild/digital-forensics-lab/blob/main/Lab%2005/files/challenge.pcapng).
